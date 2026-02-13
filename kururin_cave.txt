@@ -1,0 +1,594 @@
+#amk 2
+
+#spc
+{
+    #title   "Kuru Kuru Kururin - Cave"
+    #author  "Atsuhiro Motoyama cv. copyrat90"
+}
+
+#path "kururin_cave"
+
+#samples
+{
+    #optimized
+    "00_Bass.brr"
+    "01_Snare.brr"
+    "02_Kick.brr"
+    "03_DMG_Ch3_Triangle.brr"
+    "04_DMG_25__Square.brr"
+    "05_DMG_50__Square.brr"
+    "06_Tom.brr"
+    "07_DMG_Ch3_Sq_Saw.brr"
+}
+
+#instruments
+{
+    "00_Bass.brr"             $DF $71 $80 $06 $67 ;@30
+    "02_Kick.brr"             $FF $E0 $80 $06 $67 ;@31
+    "01_Snare.brr"            $FF $E0 $80 $06 $67 ;@32
+    "03_DMG_Ch3_Triangle.brr" $FF $E0 $80 $08 $1F ;@33
+    "04_DMG_25__Square.brr"   $FF $E0 $80 $08 $1F ;@34
+    "05_DMG_50__Square.brr"   $FF $E0 $80 $04 $0F ;@35
+    "07_DMG_Ch3_Sq_Saw.brr"   $FF $E0 $80 $08 $24 ;@36
+    "06_Tom.brr"              $FF $E0 $80 $06 $67 ;@37
+}
+
+; created with fur2amk 0.3.2
+
+w128 t42
+
+$EF $00 $7F $7F
+$F1 $00 $00 $01
+$F5 $7F $00 $00 $00 $00 $00 $00 $00
+
+
+
+#0
+; enable light staccato
+$F4$02 
+; section 00
+r2^4^8^16
+; section 01
+@31 v240 o4 c4^8
+/
+; reset state on loop
+@31  
+; section 02
+@30 v255 o3 g+8 o4 g+16 o3 g+16 o4 g+16 o3 g+16 g+8 o4 g+16 o3 g+16 o4 g+16 g+16
+; section 03
+(3)[
+v255 o3 g+8 o4 g+16 o3 g+16 o4 g+16 o3 g+16 g+8 o4 g+16 o3 g+16 o4 g+16 g+16]
+; section 04
+(1)[
+v255 d+8 o5 d+16 o4 d+16 o5 d+16 o4 d+16 d+8 o5 d+16 o4 d+16 o5 d+16 d+16]
+; section 05
+(1)
+; section 06
+(2)[
+v255 o3 e8 o4 e16 o3 e16 o4 e16 o3 e16 e8 o4 e16 o3 e16 o4 e16 e16]
+; section 07
+(2)
+; section 08
+(7)[
+v255 o3 f+8 o4 f+16 o3 f+16 o4 f+16 o3 f+16 f+8 o4 f+16 o3 f+16 o4 f+16 f+16]
+; section 09
+(12)[
+v255 o3 g8 o4 g16 o3 g16 o4 g16 o3 g16 g16 o4 g16 o3 g16 o4 g16 g16 g16]
+; section 0A
+(3)
+; section 0B
+(3)
+; section 0C
+(1)
+; section 0D
+(1)
+; section 0E
+(4)[
+v255 c+8 o5 c+16 o4 c+16 o5 c+16 o4 c+16 c+8 o5 c+16 o4 c+16 o5 c+16 c+16]
+; section 0F
+(4)
+; section 10
+(5)[
+v255 o3 a8 o4 a16 o3 a16 o4 a16 o3 a16 a8 o4 a16 o3 a16 o4 a16 a16]
+; section 11
+(5)
+; section 12
+(6)[
+v255 o3 f8 o4 f16 o3 f16 o4 f16 o3 f16 f8 o4 f16 o3 f16 o4 f16 f16]
+; section 13
+(6)
+; section 14
+(7)
+; section 15
+(7)
+; section 16
+(8)[
+v255 o3 g8 g16 r8^16 g16 o4 g16 o3 g16 g8 o4 g16]
+; section 17
+(9)[
+v255 o3 f+8 f+16 r8^16 f+16 o4 f+16 o3 f+16 o4 f+8 o3 f+16]
+; section 18
+(8)
+; section 19
+(9)
+; section 1A
+v255 f8 f16 r8^16 f16 o4 f16 o3 f16 f8 o4 f16
+; section 1B
+v255 o3 e8 e16 r8^16 e16 o4 e16 o3 e16 o4 e8 o3 e16
+; section 1C
+v255 o4 d8 d16 r8^16 d16 o5 d16 o4 d16 d8 o5 d16
+; section 1D
+v255 o3 g8 o4 g16 o3 g16 o4 g16 o3 g16 g8 o4 g16 o3 g16 o4 g16 g16
+; section 1E
+(10)[
+v255 o3 g+8 g+16 r8^16 g+16 o4 g+16 o3 g+16 g+8 o4 g+16]
+; section 1F
+(11)[
+v255 o3 g8 g16 r8^16 g16 o4 g16 o3 g16 o4 g8 o3 g16]
+; section 20
+(10)
+; section 21
+(11)
+; section 22
+v255 f+8 f+16 r8^16 f+16 o4 f+16 o3 f+16 f+8 o4 f+16
+; section 23
+v255 o3 f8 f16 r8^16 f16 o4 f16 o3 f16 o4 f8 o3 f16
+; section 24
+(2)
+; section 25
+(7)
+; section 26
+(12)
+
+
+#1
+; section 00
+r2^4
+; section 01
+@32 v240 o4 c8 c8 c16 c16 c16 c16 c16
+/
+; reset state on loop
+@32  
+; section 02
+(13)[
+@31 v240 c8^16 @32 c8^16 @31 c8^16 @32 c8^16]
+; section 03
+(13)
+; section 04
+(13)
+; section 05
+(13)
+; section 06
+(13)
+; section 07
+(13)
+; section 08
+(13)
+; section 09
+@31 v240 c8^16 @32 c8 @31 c16 c16 @32 c8 c16 c16 c16
+; section 0A
+(13)
+; section 0B
+(13)
+; section 0C
+(13)
+; section 0D
+(13)
+; section 0E
+(13)
+; section 0F
+(13)
+; section 10
+(13)
+; section 11
+(13)
+; section 12
+(13)
+; section 13
+(13)
+; section 14
+(13)
+; section 15
+@31 v240 c8^16 @32 c16 c16 @31 c16 @37 y4 c16 c16 y8 o3 a16 a16 y10 e16 e16
+; section 16
+(16)[
+@31 v240 y10 o4 c8 c16 @32 c8 @31 c16 c16 @32 c16 @31 c16 @32 c8^16]
+; section 17
+(14)[
+@31 v240 c8 c16 @32 c8 @31 c16 c16 @32 c16 @31 c16 @32 c8 @31 c16]
+; section 18
+(15)[
+v240 y10 c8 c16 @32 c8 @31 c16 c16 @32 c16 @31 c16 @32 c8^16]
+; section 19
+(14)
+; section 1A
+(15)
+; section 1B
+(14)
+; section 1C
+(17)[
+v240 c8 c16 @32 c8 @31 c16 c16 @32 c16 @31 c16 @32 c8^16]
+; section 1D
+@31 v240 c8 c16 @32 c8^16 @31 c16 @32 c8 c8 c16
+; section 1E
+(16)
+; section 1F
+(14)
+; section 20
+(15)
+; section 21
+(14)
+; section 22
+(15)
+; section 23
+(14)
+; section 24
+(17)
+; section 25
+@31 v240 c8 c16 @32 c8 @31 c16 c16 @32 c16 @31 c16 @32 c16 c8
+; section 26
+@31 v240 c8 c16 @32 c8 c16 @31 c16 @32 c16 c16 c16 c16 c16
+
+
+#2
+; section 00
+r1^4^16
+/
+; section 02
+(18)[
+r8^16 @33 v221 $DF o4 d+8^32 $DE$00$15$40 ^32 $DF g+8^32 $DE$00$15$40 ^32
+$DF a+8 b8^32 $DE$00$15$40 ^8^16^32]
+; section 03
+(19)[
+r16 $DF g+8^32 $DE$00$15$40 ^32 $DF b8^32 $DE$00$15$40 ^32]
+; section 04
+(20)[
+$DF a+8^32 $DE$00$15$40 ^32
+$DF o5 f32 $DD$00$06 f+ ^16^32 d+8^32 $DE$00$15$40 ^2^8^32]
+; section 05
+r8^16 $DF d+8^32 $DE$00$15$40 ^32
+; section 06
+$DF d+8 e16 d+8 o4 g+8^32 $DE$00$15$40 ^4^16^32
+; section 07
+r8 $DF g+8^32 $DE$00$15$40 ^32 $DF b8^32 $DE$00$15$40 ^32
+$DF o5 c+8 c32 o4 b32
+; section 08
+a+8^32 $DE$00$15$40 ^2^16 r32
+; section 09
+@34 v131 $DF o5 c+8 v131 o4 c+32 v99 o5 c+32
+v131 o4 g32 v99 c+32 v131 a+32 v99 g32 v131 o5 g32 v99 o4 a+32 v131 o5 e8
+v131 c+32 v99 e32
+v131 e32 v99 c+32 v131 g32 v99 e32 v131 a+32 v99 g32
+; section 0A
+(18)
+; section 0B
+(19)
+; section 0C
+(20)
+; section 0D
+$DF r8^16 f+8^32 $DE$00$15$40 ^32
+; section 0E
+$DF f+8^32 $DE$00$15$40 ^32
+$DF e8^32 $DE$00$15$40 ^32 $DF o4 g+8^32 $DE$00$15$40 ^32
+$DF b8 o5 e8^32 $DE$00$15$40 ^4^16^32
+; section 0F
+$DF r8 f32 $DD$00$06 f+ ^8 $DE$00$15$40 ^32
+; section 10
+$DF f+8^32 $DE$00$15$40 ^32
+$DF e8^32 $DE$00$15$40 ^32 $DF d+8^32 $DE$00$15$40 ^32
+$DF e8 c+8^32 $DE$00$15$40 ^2^8^32
+; section 12
+r8^16 $DF o4 d+8^32 $DE$00$15$40 ^32 $DF g+8^32 $DE$00$15$40 ^32
+$DF a+8 b8^32 $DE$00$15$40 ^4^16^32
+; section 13
+r16 $DF g+16 b8 o5 f32 $DD$00$06 f+ ^8 $DE$00$15$40 ^2^8^32
+; section 15
+@34 v131 $DF o4 c+32 v99 c+32 v131 f+32 v99 c+32 v131 a+32 v99 f+32
+v131 o5 f+16^32 v99 ^32 v131 f+32 v99 f+32 v131 o4 f+32 v99 o5 f+32
+v131 c+32 v99 o4 f+32 v131 o5 f+32 v99 c+32
+v131 c+32 v99 f+32 v131 f+32 v99 c+32 v131 a+32 v99 f+32
+; section 16
+r8^16 @36 v159 $DF f32 $DD$00$06 f+ ^8 $DE$00$15$40 ^32 $DF o4 b8^32 $DE$00$15$40 ^32
+$DF o5 f+8 e8^32 $DE$00$15$40 ^8^16^32
+; section 17
+r16 $DF c+8 o4 b16 a8 $DE$00$15$40 ^32^64 r8^16^64
+; section 18
+$DF f+8 $DE$00$15$40 ^32^64^=1 r=2 $DF b8^32 $DE$00$15$40 ^32
+$DF o5 f32 $DD$00$06 f+ ^16^32 e8^32 $DE$00$15$40 ^8^16^32
+; section 19
+$DF g+32 $DD$00$06 a ^8 $DE$00$15$40 ^4^32
+; section 1A
+r8^16 $DF d+32 $DD$00$06 e ^8 $DE$00$15$40 ^32 $DF o4 a8^32 $DE$00$15$40 ^32
+$DF o5 e8 $DF d8^32 $DE$00$15$40 ^8^16^32
+; section 1B
+r16 $DF o4 b8 a16 g8 a8^32 $DE$00$15$40 ^2^16^32
+; section 1C
+r16
+; section 1D
+v159 $DF o5 c8 $DE$00$15$40 ^32^64 r64
+v159 $DF o4 b8 $DE$00$15$40 ^32^64 r64 v159 $DF o5 c8 $DE$00$15$40 ^32^64 r64
+v159 $DF d8 $DE$00$15$40 ^32^64 r8^16^64
+; section 1E
+v159 $DF f+32 $DD$00$06 g ^8 $DE$00$15$40 ^32 $DF c8^32 $DE$00$15$40 ^32
+$DF g8 f8^32 $DE$00$15$40 ^8^16^32
+; section 1F
+r16 $DF d8 c16 o4 a+8 $DE$00$15$40 ^32^64 r8^16^64
+; section 20
+$DF g8 $DE$00$15$40 ^32^64^=1 r=2 $DF o5 c8^32 $DE$00$15$40 ^32
+$DF f+32 $DD$00$06 g ^16^32 f8^32 $DE$00$15$40 ^8^16^32
+; section 21
+$DF a32 $DD$00$06 a+ ^8 $DE$00$15$40 ^4^32
+; section 22
+r8^16 $DF a+8^32 $DE$00$15$40 ^32 $DF g+8^32 $DE$00$15$40 ^32
+$DF a+8^32 $DE$00$15$40 ^32
+; section 23
+$DF g+8^32 $DE$00$15$40 ^32
+$DF f8^32 $DE$00$15$40 ^32 $DF d+8 c+8^32 $DE$00$15$40 ^16^32
+; section 24
+$DF d+8^32 $DE$00$15$40 ^32
+$DF o4 g+8^32 $DE$00$15$40 ^32 $DF b8^32 $DE$00$15$40 ^32
+$DF o5 g+8^32 $DE$00$15$40 ^32
+; section 25
+$DF f+8^32 $DE$00$15$40 ^32 $DF g+8 f+8^32 $DE$00$15$40 ^4^32
+; section 26
+@34 v131 $DF o4 c+32 v99 c+32 v131 g32 v99 c+32 v131 a+32 v99 g32
+v131 o5 c+8 v131 o4 a+32 v99 o5 c+32 v131 c+32 v99 o4 a+32
+v131 o5 e32 v99 c+32 v131 g32 v99 e32
+v131 e32 v99 g32 v131 g32 v99 e32 v131 a+32 v99 g32
+
+
+#3
+; section 00
+r1^4^16
+/
+; section 02
+(21)[
+r8^16 @35 v99 y0 $DF o5 d+8^32 $DE$00$15$40 ^32 $DF g+8^32 $DE$00$15$40 ^32
+$DF a+8 b8^32 $DE$00$15$40 ^8^16^32]
+; section 03
+(22)[
+r16 $DF g+8^32 $DE$00$15$40 ^32 $DF b8^32 $DE$00$15$40 ^32]
+; section 04
+(23)[
+$DF a+8^32 $DE$00$15$40 ^32
+$DF o6 f32 $DD$00$06 f+ ^16^32 d+8^32 $DE$00$15$40 ^2^8^32]
+; section 05
+r8^16 $DF d+8^32 $DE$00$15$40 ^32
+; section 06
+$DF d+8 e16 d+8 o5 g+8^32 $DE$00$15$40 ^4^16^32
+; section 07
+r8 $DF g+8^32 $DE$00$15$40 ^32 $DF b8^32 $DE$00$15$40 ^32
+$DF o6 c+8 c32 o5 b32
+; section 08
+a+8^32 $DE$00$15$40 ^2^16 r32
+; section 09
+@34 v159 y0 $DF o4 a+8 v159 o3 a+32 v115 o4 a+32
+v159 e32 v115 o3 a+32 v159 o4 g32 v115 e32 v159 o5 e32 v115 o4 g32 v159 o5 c+8
+v159 o4 a+32 v115 o5 c+32
+v159 c+32 v115 o4 a+32 v159 o5 e32 v115 c+32 v159 g32 v115 e32
+; section 0A
+(21)
+; section 0B
+(22)
+; section 0C
+(23)
+; section 0D
+$DF r8^16 o6 f+8^32 $DE$00$15$40 ^32
+; section 0E
+$DF f+8^32 $DE$00$15$40 ^32
+$DF e8^32 $DE$00$15$40 ^32 $DF o5 g+8^32 $DE$00$15$40 ^32
+$DF b8 o6 e8^32 $DE$00$15$40 ^4^16^32
+; section 0F
+$DF r8 f32 $DD$00$06 f+ ^8 $DE$00$15$40 ^32
+; section 10
+$DF f+8^32 $DE$00$15$40 ^32
+$DF e8^32 $DE$00$15$40 ^32 $DF d+8^32 $DE$00$15$40 ^32
+$DF e8 c+8^32 $DE$00$15$40 ^2^8^32
+; section 12
+r8^16 $DF o5 d+8^32 $DE$00$15$40 ^32 $DF g+8^32 $DE$00$15$40 ^32
+$DF a+8 b8^32 $DE$00$15$40 ^4^16^32
+; section 13
+r16 $DF g+16 b8 o6 f32 $DD$00$06 f+ ^8 $DE$00$15$40 ^2^8^32
+; section 15
+@34 v159 $DF o3 a+32 v115 a+32 v159 o4 c+32 v115 o3 a+32 v159 o4 f+32 v115 c+32
+v159 o5 c+16^32 v115 ^32 v159 c+32 v115 c+32 v159 o4 c+32 v115 o5 c+32
+v159 o4 a+32 v115 c+32 v159 o5 c+32 v115 o4 a+32
+v159 a+32 v115 o5 c+32 v159 c+32 v115 o4 a+32 v159 o5 f+32 v115 c+32
+; section 16
+r8^16 v140 y0 $DF o4 b16^32^64^=1 r=2 b16 r8^16 b8^64^=1 r8^16^32^=2
+; section 17
+(24)[
+o5 c+16^32^64^=1 r=2 c+16 r2^16]
+; section 18
+v140 y0 d16^32^64^=1 r=2 d16 r8^16 d8^64^=1 r8^16^32^=2
+; section 19
+(24)
+; section 1A
+v140 y0 $DF c16^32^64^=1 r=2 c16 r8^16 c8^64^=1 r8^16^32^=2
+; section 1B
+(25)[
+d16^32^64^=1 r=2 d16 r2^16]
+; section 1C
+v140 y0 c16^32^64^=1 r=2 c16 r8^16 o4 a8 o5 c16
+; section 1D
+@35 v183 y20 o3 a8 $DE$00$15$40 ^32^64 r64
+v183 $DF g8 $DE$00$15$40 ^32^64 r64 v183 $DF a8 $DE$00$15$40 ^32^64 r64
+v183 $DF b8 $DE$00$15$40 ^32^64 r8^16^64
+; section 1E
+@34 v140 y0 $DF o5 c16^32^64^=1 r=2 c16 r8^16 c8^64^=1 r8^16^32^=2
+; section 1F
+(25)
+; section 20
+v140 y0 d+16^32^64^=1 r=2 d+16 r8^16 d+8^64^=1 r8^16^32^=2
+; section 21
+(25)
+; section 22
+v140 y0 c+16^32^64^=1 r=2 c+16 r8^16 c+8^64^=1 r8^16^32^=2
+; section 23
+c16^32^64^=1 r=2 c16 r4^8
+; section 24
+@35 v183 $DF o3 g+8^32 $DE$00$15$40 ^32
+$DF e8^32 $DE$00$15$40 ^32 $DF e8^32 $DE$00$15$40 ^32
+$DF b8^32 $DE$00$15$40 ^32
+; section 25
+$DF o4 c+8^32 $DE$00$15$40 ^32 $DF d+8 c+8^32 $DE$00$15$40 ^4^32
+; section 26
+@34 v159 y20 $DF o3 a+32 v115 a+32 v159 o4 e32 v115 o3 a+32 v159 o4 g32 v115 e32
+v159 a+8 v159 g32 v115 a+32 v159 a+32 v115 g32
+v159 o5 c+32 v115 o4 a+32 v159 o5 e32 v115 c+32
+v159 c+32 v115 e32 v159 e32 v115 c+32 v159 g32 v115 e32
+
+
+#4
+; section 00
+@35 v159 y20 o2 b32 v115 b32 v159 o3 g+32 v115 o2 b32 v159 o4 d+32 v115 o3 g+32 v159 g+32 v115 o4 d+32
+v159 g+32 v115 o3 g+32 v159 o4 d+32 v115 g+32
+v159 o5 d+32 v115 o4 d+32 v159 o3 g+32 v115 o5 d+32
+v159 o4 d+32 v115 o3 g+32 v159 d+32 v115 o4 d+32 v159 o3 g+32 v115 d+32 v159 b32 v115 g+32
+; section 01
+v159 o4 g+32 v115 o3 b32 v159 o5 d+32 v115 o4 g+32 v159 d+32 v115 o5 d+32 v159 o3 g+32 v115 o4 d+32
+v159 g+32 v115 o3 g+32 v159 o4 d+32 v115 g+32
+v159 o5 d+32 v115 o4 d+32 v159 o3 g+32 v115 o5 d+32 v159 o4 d+32 v115 o3 g+32
+/
+; reset state on loop
+@35  
+; section 02
+(26)[
+v159 y20 d+32 v115 o4 d+32 v159 o3 g+32 v115 d+32 v159 b32 v115 g+32
+v159 o4 g+32 v115 o3 b32 v159 o5 d+32 v115 o4 g+32 v159 d+32 v115 o5 d+32 v159 o3 g+32 v115 o4 d+32
+v159 g+32 v115 o3 g+32 v159 o4 d+32 v115 g+32
+v159 o5 d+32 v115 o4 d+32 v159 o3 g+32 v115 o5 d+32 v159 o4 d+32 v115 o3 g+32]
+; section 03
+(26)
+; section 04
+(27)[
+v159 d+32 v115 o4 d+32 v159 o3 a+32 v115 d+32 v159 o4 c+32 v115 o3 a+32
+v159 o4 f+32 v115 c+32 v159 o5 d+32 v115 o4 f+32 v159 d+32 v115 o5 d+32 v159 o3 a+32 v115 o4 d+32
+v159 f+32 v115 o3 a+32 v159 o4 d+32 v115 f+32
+v159 o5 d+32 v115 o4 d+32 v159 o3 a+32 v115 o5 d+32 v159 o4 d+32 v115 o3 a+32]
+; section 05
+(27)
+; section 06
+(26)
+; section 07
+(26)
+; section 08
+(29)[
+v159 c+32 v115 o4 d+32 v159 o3 f+32 v115 c+32 v159 a+32 v115 f+32
+v159 o4 f+32 v115 o3 a+32 v159 o5 c+32 v115 o4 f+32 v159 c+32 v115 o5 c+32 v159 o3 f+32 v115 o4 c+32
+v159 f+32 v115 o3 f+32 v159 o4 c+32 v115 f+32
+v159 o5 c+32 v115 o4 c+32 v159 o3 f+32 v115 o5 c+32 v159 o4 c+32 v115 o3 f+32]
+; section 09
+(30)[
+r2^4]
+; section 0A
+(26)
+; section 0B
+(26)
+; section 0C
+(27)
+; section 0D
+(27)
+; section 0E
+v159 c+32 v115 d+32 v159 g+32 v115 c+32 v159 b32 v115 g+32
+v159 o4 e32 v115 o3 b32 v159 o5 c+32 v115 o4 e32 v159 c+32 v115 o5 c+32 v159 o3 g+32 v115 o4 c+32
+v159 e32 v115 o3 g+32 v159 o4 c+32 v115 e32
+v159 o5 c+32 v115 o4 c+32 v159 o3 g+32 v115 o5 c+32 v159 o4 c+32 v115 o3 g+32
+; section 0F
+v159 c+32 v115 o4 c+32 v159 o3 g+32 v115 c+32 v159 b32 v115 g+32
+v159 o4 e32 v115 o3 b32 v159 o5 c+32 v115 o4 e32 v159 c+32 v115 o5 c+32 v159 o3 g+32 v115 o4 c+32
+v159 e32 v115 o3 g+32 v159 o4 c+32 v115 e32
+v159 o5 c+32 v115 o4 c+32 v159 o3 g+32 v115 o5 c+32 v159 o4 c+32 v115 o3 g+32
+; section 10
+(28)[
+v159 c+32 v115 o4 c+32 v159 o3 g+32 v115 c+32 v159 a32 v115 g+32
+v159 o4 g+32 v115 o3 a32 v159 o5 c+32 v115 o4 g+32 v159 c+32 v115 o5 c+32 v159 o3 g+32 v115 o4 c+32
+v159 g+32 v115 o3 g+32 v159 o4 c+32 v115 g+32
+v159 o5 c+32 v115 o4 c+32 v159 o3 g+32 v115 o5 c+32 v159 o4 c+32 v115 o3 g+32]
+; section 11
+(28)
+; section 12
+v159 d+32 v115 o4 c+32 v159 o3 g+32 v115 d+32 v159 b32 v115 g+32
+v159 o4 f32 v115 o3 b32 v159 o5 d+32 v115 o4 f32 v159 d+32 v115 o5 d+32 v159 o3 g+32 v115 o4 d+32
+v159 f32 v115 o3 g+32 v159 o4 d+32 v115 f32
+v159 o5 d+32 v115 o4 d+32 v159 o3 g+32 v115 o5 d+32 v159 o4 d+32 v115 o3 g+32
+; section 13
+v159 d+32 v115 o4 d+32 v159 o3 g+32 v115 d+32 v159 b32 v115 g+32
+v159 o4 f32 v115 o3 b32 v159 o5 d+32 v115 o4 f32 v159 d+32 v115 o5 d+32 v159 o3 g+32 v115 o4 d+32
+v159 f32 v115 o3 g+32 v159 o4 d+32 v115 f32
+v159 o5 d+32 v115 o4 d+32 v159 o3 g+32 v115 o5 d+32 v159 o4 d+32 v115 o3 g+32
+; section 14
+(29)
+; section 15
+(30)
+; section 16
+v159 y20 o4 d32 v115 d32 v159 g32 v115 d32 v159 b32 v115 g32
+@34 v140 y0 g16^32^64^=1 r=2 g16 @35 v159 y20 g32 v115 g32
+v159 b32 v115 g32 v159 g32 v115 b32
+@34 v140 y0 g8^64^=1 r32^=2
+; section 17
+@35 v159 y20 e32 v115 e32 v159 a32 v115 e32 v159 o5 c+32 v115 o4 a32
+@34 v140 y0 a16^32^64^=1 r=2 a16 @35 v159 y20 a32 v115 a32
+v159 o5 c+32 v115 o4 a32 v159 a32 v115 o5 c+32
+v159 o4 e32 v115 a32 v159 a32 v115 e32 v159 o5 c+32 v115 o4 a32
+; section 18
+v159 y20 d32 v115 d32 v159 g32 v115 d32 v159 b32 v115 g32
+@34 v140 y0 b16^32^64^=1 r=2 b16 @35 v159 y20 g32 v115 g32
+v159 b32 v115 g32 v159 g32 v115 b32
+@34 v140 y0 b8^64^=1 r32^=2
+; section 19
+@35 v159 y20 e32 v115 e32 v159 a32 v115 e32 v159 o5 c+32 v115 o4 a32
+@34 v140 y0 a16^32^64^=1 r=2 a16 @35 v159 y20 a32 v115 a32
+v159 o5 c+32 v115 o4 a32 v159 a32 v115 o5 c+32
+v159 c+32 v115 o4 a32 v159 a32 v115 o5 c+32 v159 o4 c+32 v115 a32
+; section 1A
+v159 y20 e32 v115 e32 v159 a32 v115 e32 v159 o5 c32 v115 o4 a32
+@34 v140 y0 a16^32^64^=1 r=2 a16 @35 v159 y20 a32 v115 a32
+v159 o5 c32 v115 o4 a32 v159 a32 v115 o5 c32
+@34 v140 y0 o4 a8^64^=1 r32^=2
+; section 1B
+@35 v159 y20 g32 v115 g32 v159 b32 v115 g32 v159 o5 d32 v115 o4 b32
+@34 v140 y0 b16^32^64^=1 r=2 b16 @35 v159 y20 b32 v115 b32
+v159 o5 d32 v115 o4 b32 v159 b32 v115 o5 d32
+v159 o4 g32 v115 b32 v159 b32 v115 g32 v159 o5 d32 v115 o4 b32
+; section 1C
+v159 y20 f32 v115 f32 v159 a32 v115 f32 v159 o5 c32 v115 o4 a32
+@34 v140 y0 a16^32^64^=1 r=2 a16 @35 v159 y20 a32 v115 a32
+v159 o5 c32 v115 o4 a32 v159 a32 v115 o5 c32
+@34 v140 y0 o4 f8 a16
+; section 1D
+(30)
+; section 1E
+@35 v159 y20 d+32 v115 d+32 v159 g+32 v115 d+32 v159 o5 c32 v115 o4 g+32
+@34 v140 y0 g+16^32^64^=1 r=2 g+16 @35 v159 y20 g+32 v115 g+32
+v159 o5 c32 v115 o4 g+32 v159 g+32 v115 o5 c32
+@34 v140 y0 o4 g+8^64^=1 r32^=2
+; section 1F
+@35 v159 y20 d32 v115 d32 v159 f32 v115 d32 v159 a+32 v115 f32
+@34 v140 y0 a+16^32^64^=1 r=2 a+16 @35 v159 y20 f32 v115 f32
+v159 a+32 v115 f32 v159 f32 v115 a+32
+v159 d32 v115 f32 v159 f32 v115 d32 v159 a+32 v115 f32
+; section 20
+v159 y20 d+32 v115 d+32 v159 g+32 v115 d+32 v159 o5 c32 v115 o4 g+32
+@34 v140 y0 o5 c16^32^64^=1 r=2 c16 @35 v159 y20 o4 g+32 v115 g+32
+v159 o5 c32 v115 o4 g+32 v159 g+32 v115 o5 c32
+@34 v140 y0 c8^64^=1 r32^=2
+; section 21
+@35 v159 y20 o4 d32 v115 d32 v159 f32 v115 d32 v159 a+32 v115 f32
+@34 v140 y0 a+16^32^64^=1 r=2 a+16 @35 v159 y20 f32 v115 f32
+v159 a+32 v115 f32 v159 f32 v115 a+32
+v159 a+32 v115 f32 v159 f32 v115 a+32 v159 d32 v115 f32
+; section 22
+v159 y20 f32 v115 f32 v159 f+32 v115 f32 v159 a+32 v115 f+32
+@34 v140 y0 a+16^32^64^=1 r=2 a+16 @35 v159 y20 f+32 v115 f+32
+v159 a+32 v115 f+32 v159 f+32 v115 a+32
+@34 v140 y0 a+8^64^=1 r32^=2
+; section 23
+@35 v159 y20 f32 v115 f32 v159 g+32 v115 f32 v159 o5 c32 v115 o4 g+32
+@34 v140 y0 g+16^32^64^=1 r=2 g+16 @35 v159 y20 g+32 v115 g+32
+v159 o5 c32 v115 o4 g+32 v159 g+32 v115 o5 c32
+v159 o4 f32 v115 g+32 v159 g+32 v115 f32 v159 o5 c32 v115 o4 g+32
+; section 24
+r1^1^4
+
+
